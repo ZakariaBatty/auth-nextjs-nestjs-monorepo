@@ -1,3 +1,4 @@
+import SignupForm from "@/components/auth/SignupForm";
 import Link from "next/link";
 import React from "react";
 
@@ -7,32 +8,13 @@ const SignUpPage = () => {
       <h1 className="text-2xl font-bold text-center mb-4">Sign Up</h1>
 
       {/* sign up form */}
-      <form className="flex flex-col w-full gap-4">
-        <input
-          type="text"
-          placeholder="Full Name"
-          className="p-2 border border-gray-300 rounded-lg"
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          className="p-2 border border-gray-300 rounded-lg"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          className="p-2 border border-gray-300 rounded-lg"
-        />
-        <button className="bg-blue-500 text-white p-2 rounded-lg">
-          Sign Up
-        </button>
-      </form>
+      <SignupForm />
 
       {/* sign in link */}
       <div className="flex justify-between text-sm mt-4">
         <p className="flex justify-between text-sm">
-          Already have an account?{" "}
-          <Link href={"/auth/signin"} className="underline">
+          Already have an account ? {"  "}
+          <Link href={"/auth/signin"} className="underline ml-2 hover:text-blue-500">
             Sign In
           </Link>
         </p>
