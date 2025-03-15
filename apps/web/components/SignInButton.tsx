@@ -5,6 +5,7 @@ import React from "react";
 const SignInButton = async () => {
 
   const session = await getSession()
+  console.log("session", session)
   return (
     <div className="flex items-center gap-2 ml-auto">
       {!session || !session.user ? (
