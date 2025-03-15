@@ -50,3 +50,8 @@ export async function getSession() {
       redirect('/auth/signin');
    }
 }
+
+// delete the session cookie
+export async function deleteSession() {
+   (await cookies()).delete('session');
+}
